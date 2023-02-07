@@ -4,7 +4,6 @@ import com.sparta.spring_basic.dto.DeleteRequestDto;
 import com.sparta.spring_basic.dto.DeleteResponseDto;
 import com.sparta.spring_basic.dto.PostRequestDto;
 import com.sparta.spring_basic.dto.PostResponseDto;
-import com.sparta.spring_basic.entity.Post;
 import com.sparta.spring_basic.service.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -37,16 +36,8 @@ public class PostController {
         return postService.updatePost(id, postRequestDto);
     }
 
-//    @DeleteMapping("/api/post/{id}")
-//    public PostResponseDto deletePost(@PathVariable Long id, @RequestBody PostRequestDto requestDto) {
-//        return postService.deletePost(id, requestDto);
-//    }
-
     @DeleteMapping("api/post/{id}")
     public DeleteResponseDto deletePost(@PathVariable Long id, @RequestBody DeleteRequestDto requestDto) {
         return postService.deletePost(id, requestDto);
     }
-
-
-
 }

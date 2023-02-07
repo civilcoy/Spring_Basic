@@ -3,7 +3,6 @@ package com.sparta.spring_basic.entity;
 import com.sparta.spring_basic.dto.PostRequestDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 @Entity
